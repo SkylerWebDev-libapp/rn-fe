@@ -1,13 +1,12 @@
 import { StyleSheet } from 'react-native'
 
-export const inputStyle = StyleSheet.create({
+export const buttonStyle = StyleSheet.create({
 
-    loginInput: {
+    regButton: {
         height: 40,
         width:325,
         marginTop:15,
         borderColor: 'grey',
         borderWidth: 1,
-        paddingLeft:5
     }
   });

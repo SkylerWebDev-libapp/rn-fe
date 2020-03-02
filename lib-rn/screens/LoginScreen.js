@@ -14,9 +14,19 @@ import { textStyle } from "../constants/Styles/text";
 import { containerStyle } from "../constants/Styles/container";
 import { imageStyle } from "../constants/Styles/image";
 import { inputStyle } from "../constants/Styles/input";
+import { buttonStyle } from '../constants/Styles/button'
 import { MonoText } from "../components/StyledText";
 
 export default function HomeScreen() {
+  const [userNameValue, userNameOnChangeText] =React.useState('')
+  console.log(userNameValue)
+  const [passwordValue, passwordOnChangeText] =React.useState('')
+  console.log(passwordValue)
+  const onSubmit = () => {
+
+   const values = JSON.stringify({userName : userNameValue, password: passwordValue})
+        console.log(values)
+  }
   return (
     <View style={containerStyle.container}>
       <ScrollView
@@ -27,8 +37,8 @@ export default function HomeScreen() {
           <Image
             source={
               __DEV__
-                ? require("../assets/images/robot-dev.png")
-                : require("../assets/images/robot-prod.png")
+                ? require("../assets/images/bdLogo.png")
+                : require("../assets/images/bdLogo.png")
             }
             style={imageStyle.welcomeImage}
           />
@@ -39,18 +49,25 @@ export default function HomeScreen() {
           <View style={containerStyle.hdrCont}>
             <TextInput
               style={inputStyle.loginInput}
-              placeholder="Username"
+              placeholder='Username'
+              placeholderTextColor='#fff'
               autoCompleteType='username'
               textContentType='username'
+              value={userNameValue}
+              onChangeText={text => userNameOnChangeText(text)}
             ></TextInput>
             <TextInput
               style={inputStyle.loginInput}
               placeholder="Password"
+              placeholderTextColor="#fff"
               autoCompleteType='password'
-              textContentType='password'
+              textContentType='password'              
+              value={passwordValue}
+              onChangeText={text => passwordOnChangeText(text)}
               secureTextEntry={true}
             ></TextInput>
-            <TouchableOpacity style={inputStyle.loginInput}><Text style={textStyle.hdrTxt}>Login</Text></TouchableOpacity>
+            <TouchableOpacity style={buttonStyle.regButton} onPress={onSubmit}
+            ><Text style={textStyle.tOText}>Login</Text></TouchableOpacity>
           </View>
         </View>
       </ScrollView>

@@ -13,7 +13,7 @@ export const textStyle = StyleSheet.create({
       color: 'rgba(96,100,109, 0.8)',
     },
     hdrTxt: {
-      fontSize: 17,
+      fontSize: 25,
       color: 'rgba(96,100,109, 1)',
       lineHeight: 24,
       textAlign: 'center',
@@ -32,4 +32,10 @@ export const textStyle = StyleSheet.create({
         alignSelf: 'flex-start',
         marginTop: 1,
       },
+    tOText:{
+        fontSize: 20,
+        marginTop: 5,
+        color: 'white',
+        textAlign: 'center',
+    }
   });

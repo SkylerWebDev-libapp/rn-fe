@@ -12,7 +12,7 @@ export const textStyle = StyleSheet.create({
     codeHighlightText: {
       color: 'rgba(96,100,109, 0.8)',
     },
-    getStartedText: {
+    hdrTxt: {
       fontSize: 17,
       color: 'rgba(96,100,109, 1)',
       lineHeight: 24,

@@ -9,7 +9,7 @@ export const containerStyle = StyleSheet.create({
   contentContainer: {
     paddingTop: 30
   },
-  welcomeContainer: {
+  hdrCont: {
     alignItems: "center",
     marginTop: 10,
     marginBottom: 20
@@ -25,14 +25,8 @@ export const containerStyle = StyleSheet.create({
     alignItems: "center",
     marginHorizontal: 50
   },
-  homeScreenFilename: {
-    marginVertical: 7
-  },
-  codeHighlightContainer: {
-    backgroundColor: "rgba(0,0,0,0.05)",
-    borderRadius: 3,
-    paddingHorizontal: 4
-  },
+
+
 
   tabBarInfoContainer: {
     position: "absolute",
@@ -57,10 +51,7 @@ export const containerStyle = StyleSheet.create({
   navigationFilename: {
     marginTop: 5
   },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: "center"
-  },
+
   helpLink: {
     paddingVertical: 15
   },
